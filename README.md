@@ -2,6 +2,8 @@
 
 live : https://filipkrz03.github.io/movie-app/
 
+Feathures : React , React Custom Hooks , Material UI , SCSS , Type Animation Library
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
