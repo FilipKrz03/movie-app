@@ -1,0 +1,32 @@
+$background-color : #212529;
+$background-header : #0b090a9d;
+$font-color : #f8f9fa;
+$font-l : 25px;
+$font-xl :55px;
+
+
+
+@mixin media-s {
+    @media(max-width : 600px){
+        @content;
+    }
+}
+
+@mixin media-xs{
+    @media(max-width:450px){
+        @content;
+    }
+}
+
+@mixin media-m {
+    @media (max-width:880px){
+        @content;
+    }
+}
+
+@mixin media-l {
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+

@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.input {
+  width: 600px;
+  border: none;
+  outline: none;
+  background: #46484b;
+  border-radius: 25px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding: 1rem;
+  animation: appear 0.5s ease-in-out;
+}
+
+@include media-s {
+  .input {
+    width: 40vw;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

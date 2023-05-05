@@ -1,0 +1,94 @@
+@import "../../variables.scss";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.853);
+}
+
+.modal {
+  position: fixed;
+  top: -2vh;
+ min-height:100vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  animation: appear 0.5s ease-in-out;
+
+
+  .variable {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .overview {
+    font-size: 18px;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    right: 10px;
+    background-color: lightgray;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .poster {
+    width: 55vw;
+    height: 50vh;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .votes {
+    color: red;
+    font-weight: bolder;
+  }
+
+  .type{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@include media-m {
+  .modal {
+    gap: 10px;
+
+    h1 {
+      font-size: 25px;
+    }
+    .poster {
+      width: 40vw;
+      height: 40vh;
+    }
+  }
+}

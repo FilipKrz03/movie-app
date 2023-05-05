@@ -1,0 +1,42 @@
+@import '../../variables.scss';
+
+.movies{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    row-gap: 50px;
+    animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(1);
+    }
+    
+}
+
+@include media-l {
+    .movies {
+    grid-template-columns: repeat(3 , 1fr);
+    }
+}
+
+@include media-m{
+    .movies{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@include media-s{
+    .movies{
+   grid-template-columns: repeat(1 , 1fr);
+    }
+}
