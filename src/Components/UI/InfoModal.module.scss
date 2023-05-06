@@ -13,17 +13,22 @@
 .modal {
   position: fixed;
   top: -2vh;
- min-height:100vh;
   left: 10%;
   width: 80%;
   z-index: 100;
-  overflow: hidden;
   color: white;
   display: flex;
   gap: 20px;
   flex-direction: column;
   align-items: center;
   animation: appear 0.5s ease-in-out;
+
+  .desc{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
 
 
   .variable {
@@ -47,7 +52,7 @@
   }
 
   .poster {
-    width: 55vw;
+    width: 60vw;
     height: 50vh;
   }
 
@@ -83,12 +88,23 @@
   .modal {
     gap: 10px;
 
+    .close{
+      right: -15px;
+      top: 30px;
+    }
+
+
+    .desc{
+      height: calc(50vh - 10px);
+      overflow-y: auto;
+    }
+
     h1 {
       font-size: 25px;
     }
     .poster {
-      width: 40vw;
-      height: 40vh;
+      width: 100vw;
+      height: 50vh;
     }
   }
 }

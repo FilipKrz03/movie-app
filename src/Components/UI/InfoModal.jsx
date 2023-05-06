@@ -15,6 +15,7 @@ const ModalOverlay = props => {
         <div className={classes.modal}>
             <CloseIcon className={classes.close} fontSize='large' onClick={props.onClose} />
         <img src={`https://image.tmdb.org/t/p/original/${props.backdropPath}`} className={classes.poster} alt='poster of movie' />
+        <div className={classes.desc}>
         <h1>{props.title}</h1>
        <span className={classes.type}> Gatunek : <p className={classes.variable}>{props.genres}</p> </span>
         <p className={classes.overview}>{props.overview}</p>
@@ -28,6 +29,7 @@ const ModalOverlay = props => {
         readOnly
       />
        <span className={classes.votes}>{(props.voteAverage / 2).toFixed(2)} </span>
+       </div>
       </div>
         </div>
     )
