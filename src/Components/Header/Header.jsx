@@ -44,8 +44,8 @@ const Header = (props) => {
             <CloseIcon fontSize="large" onClick={closeHandler} className={classes['action-icon']} />
           )}
         </li>
-        <li onClick={navChanger}> <a href="#home"> Dom </a> </li>
-        <li onClick={navChanger}> <a href="#explore"> Odkrywaj </a></li>
+        <li onClick={()=>{navChanger(); props.onClose(); setIsSearchActive(false); }}> <a href="#home"> Dom </a> </li>
+        <li onClick={()=>{navChanger(); props.onClose(); setIsSearchActive(false)}}> <a href="#explore">Odkrywaj</a></li>
       </ul>
       <button
         className={`${classes.burger} ${mobileNavActive ? classes.active : ""}`}
